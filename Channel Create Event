@@ -1,0 +1,128 @@
+
+{
+  "name": "Channel Create Event",
+  "temp": "joinedmember",
+  "event-type": "Member Join Voice Channel",
+  "_id": "zNIdh",
+  "actions": [
+    {
+      "channel": "3",
+      "varName": "joinedchannel",
+      "info": "1",
+      "storage": "1",
+      "varName2": "voiceid",
+      "name": "Store Voice Channel Info"
+    },
+    {
+      "member": "2",
+      "varName": "joinedmember",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "1",
+      "find": "1${tempVars(\"username\")}1",
+      "storage": "1",
+      "varName": "role",
+      "name": "Find Role"
+    },
+    {
+      "storage": "1",
+      "varName": "role",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "roleName": "1${tempVars(\"username\")}1",
+      "hoist": "false",
+      "mentionable": "false",
+      "color": "",
+      "position": "",
+      "storage": "1",
+      "varName": "role",
+      "reason": "",
+      "name": "Create Role"
+    },
+    {
+      "member": "2",
+      "varName2": "joinedmember",
+      "role": "3",
+      "varName": "role",
+      "reason": "",
+      "name": "Add Member Role"
+    },
+    {
+      "storage": "1",
+      "varName": "voiceid",
+      "comparison": "1",
+      "value": "Your Create Voice Channel ID",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channelName": "${tempVars(\"username\")}'s Channel",
+      "bitrate": "",
+      "userLimit": "",
+      "storage": "1",
+      "varName": "createdchannel",
+      "categoryID": "Category ID where the Channels should be created",
+      "reason": "",
+      "name": "Create Voice Channel"
+    },
+    {
+      "member": "2",
+      "varName": "joinedmember",
+      "channel": "3",
+      "varName2": "createdchannel",
+      "reason": "",
+      "name": "Set Member Voice Channel"
+    },
+    {
+      "vchannel": "3",
+      "varName": "createdchannel",
+      "role": "3",
+      "varName2": "role",
+      "permission": "MANAGE_CHANNELS",
+      "state": "0",
+      "name": "Set Role Voice Channel Perms"
+    },
+    {
+      "vchannel": "3",
+      "varName": "createdchannel",
+      "role": "3",
+      "varName2": "role",
+      "permission": "MANAGE_PERMISSIONS",
+      "state": "0",
+      "name": "Set Role Voice Channel Perms"
+    },
+    {
+      "vchannel": "3",
+      "varName": "createdchannel",
+      "role": "3",
+      "varName2": "role",
+      "permission": "MUTE_MEMBERS",
+      "state": "0",
+      "name": "Set Role Voice Channel Perms"
+    },
+    {
+      "vchannel": "3",
+      "varName": "createdchannel",
+      "role": "3",
+      "varName2": "role",
+      "permission": "MOVE_MEMBERS",
+      "state": "0",
+      "name": "Set Role Voice Channel Perms"
+    }
+  ],
+  "temp2": "joinedchannel"
+}
