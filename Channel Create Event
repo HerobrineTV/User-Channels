@@ -23,7 +23,7 @@
     },
     {
       "info": "1",
-      "find": "1${tempVars(\"username\")}1",
+      "find": "Role1${tempVars(\"username\")}1",
       "storage": "1",
       "varName": "role",
       "name": "Find Role"
@@ -40,7 +40,7 @@
       "name": "Check Variable"
     },
     {
-      "roleName": "1${tempVars(\"username\")}1",
+      "roleName": "Role1${tempVars(\"username\")}1",
       "hoist": "false",
       "mentionable": "false",
       "color": "",
