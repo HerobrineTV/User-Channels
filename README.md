@@ -1,5 +1,8 @@
 # User-Channels
 
+Discontinued for almost 4 years now!
+U can try it but I dont know if it still works!
+
 To use The Auto Channel Correctly you have to add these two Events (Channel Create Event, Channel Leave Event).
 
 Also you have to replace the stuff which is marked to replace.
